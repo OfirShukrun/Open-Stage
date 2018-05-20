@@ -4,7 +4,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 //Mailgun
 var mailgun = require("mailgun-js");
 var api_key = 'key-bd02456a121270a7c35024fa73dd40ae'; //API Key
@@ -52,11 +52,11 @@ app.post('/', (req, res) => {
         text: output
     };
 
-    mailgun.messages().send(data, function (error, body) {
-        console.log(body);
-    });
+    // mailgun.messages().send(data, function (error, body) {
+    //     console.log(body);
+    // });
 
-    res.render('contact', { msg: '*ההודעה נשלחה בהצלחה! ניתן לבקש עד 2 שירים לכל אמן' });
+    res.render('contact', { msg: '*ההודעה נשלחה בהצלחה! ניתן לבקש עד 2 שירים' });
 
 
 });
@@ -64,6 +64,8 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 });
+
+
 
 
 

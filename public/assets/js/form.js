@@ -1,28 +1,39 @@
 function validateForm() {
-    var x = document.forms["myForm"]["name"].value;
-    var y = document.forms["myForm"]["song"].value;
-    var z = document.forms["myForm"]["artist"].value;
-    if (x == "") {
+    var dropdown = document.forms["myForm"]['instrument'].value;
+    if (dropdown !== "") {
+        alert('שימו לב! יש להביא את הכלי שאיתו אתם מופיעים. למתופפים: יש מערכת תופים בפאב, אפשר להביא מצילות וסנייר.');
+    }
+    var name = document.forms["myForm"]["name"].value;
+    var song = document.forms["myForm"]["song"].value;
+    var artist = document.forms["myForm"]["artist"].value;
+    if (name == "") {
         document.getElementById("name_alert").innerHTML = 'יש לרשום שם מלא!';
 
     } else {
         document.getElementById("name_alert").innerHTML = '';
     }
-    if (y == "") {
-        document.getElementById("song_alert").innerHTML = 'יש לרשום את שם השיר!';
+    if (song == "") {
+        document.getElementById("song_alert").innerHTML = 'יש למלא את שם השיר!';
 
     } else {
         document.getElementById("song_alert").innerHTML = '';
     }
-    if (z == "") {
+    if (artist == "") {
         document.getElementById("artist_alert").innerHTML = 'יש למלא את שם האומן!';
     } else {
         document.getElementById("artist_alert").innerHTML = '';
     }
 
-    if (x !== "" && y !== "" && z !== "") {
+    if (name && song && artist !== "") {
         return true
     } else {
         return false;
     }
+
 }
+
+
+
+
+
+

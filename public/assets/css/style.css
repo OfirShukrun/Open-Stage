@@ -2,15 +2,21 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background: #F6C062;
-  color:#485e74;
-  line-height:1.6;
+  color: #485e74;
+  line-height: 1.6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-left: 1em;
   padding-right: 1em;
   direction: rtl;
+  margin-top: 0;
   text-align: center;
+}
+
+h1.brand {
+  position: relative;
+  top: 15px;
 }
 
 .container{
