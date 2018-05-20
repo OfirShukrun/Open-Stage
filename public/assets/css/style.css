@@ -14,11 +14,6 @@ body {
   text-align: center;
 }
 
-h1.brand {
-  position: relative;
-  top: 15px;
-}
-
 .container{
   max-width: 740px;
   margin-left:auto;
@@ -26,6 +21,11 @@ h1.brand {
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
+}
+
+h1.brand {
+  position: relative;
+  top: 15px;
 }
 
 img {
@@ -153,19 +153,12 @@ a {
 }
 
 /* Validation */
-p#name_alert {
+#name_alert,
+#song_alert,
+#artist_alert
+{
   color: red;
   font-size: 12px;
-}
-
-p#song_alert {
-  color: red;
-  font-size:  12px;
-}
-
-p#artist_alert {
-  color: red;
-  font-size:  12px;
 }
 
 /* LARGE SCREENS */
@@ -181,7 +174,6 @@ p#artist_alert {
 }
 
 /* YES/NO Checkbox */
-
 
 .onoff {
   margin-left: -27px;
@@ -264,10 +256,3 @@ p#artist_alert {
   left: 37px;
 }
 
-input:invalid {
-  border: 2px dashed red;
-}
-
-input:valid {
-  border: 2px solid black;
-}

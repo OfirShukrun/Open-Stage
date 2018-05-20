@@ -8,13 +8,11 @@ function validateForm() {
     var artist = document.forms["myForm"]["artist"].value;
     if (name == "") {
         document.getElementById("name_alert").innerHTML = 'יש לרשום שם מלא!';
-
     } else {
         document.getElementById("name_alert").innerHTML = '';
     }
     if (song == "") {
         document.getElementById("song_alert").innerHTML = 'יש למלא את שם השיר!';
-
     } else {
         document.getElementById("song_alert").innerHTML = '';
     }
@@ -23,13 +21,11 @@ function validateForm() {
     } else {
         document.getElementById("artist_alert").innerHTML = '';
     }
-
     if (name && song && artist !== "") {
-        return true
+        return true;
     } else {
         return false;
     }
-
 }
 
 

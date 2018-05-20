@@ -24,15 +24,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-
     var answer = "";
-
     if (req.body.answer == undefined) {
         answer = 'לא';
     } else {
         answer = 'כן';
     }
-
     const output = `
 יש לך פנייה חדשה!
 פרטי הפונה:
@@ -57,8 +54,6 @@ app.post('/', (req, res) => {
     });
 
     res.render('contact', { msg: '*ההודעה נשלחה בהצלחה! ניתן לבקש עד 2 שירים' });
-
-
 });
 
 app.listen(port, () => {
