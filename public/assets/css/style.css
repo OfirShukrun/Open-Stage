@@ -146,6 +146,22 @@ a {
   color: #485d73;
 }
 
+/* Validation */
+p#name_alert {
+  color: red;
+  font-size: 12px;
+}
+
+p#song_alert {
+  color: red;
+  font-size:  12px;
+}
+
+p#artist_alert {
+  color: red;
+  font-size:  12px;
+}
+
 /* LARGE SCREENS */
 @media(min-width:700px){
   .wrapper{
@@ -240,4 +256,12 @@ a {
 }
 .onoff input:checked + label:before {
   left: 37px;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
 }

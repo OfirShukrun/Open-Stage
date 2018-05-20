@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
+    <script src="public/assets/js/form.js"></script>
 </head>
 
 <body>
@@ -50,10 +51,11 @@
                     <br> כתבו פה את השירים שאתם רוצים לעלות איתם ואנחנו כבר נדאג לכל השאר
                 </h3>
                 {{msg}}
-                <form name="theform" method="POST" action="/">
+                <form name="myForm" onsubmit="return validateForm()" method="POST" action="/">
                     <p>
                         <label>שם מלא</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" maxlength="20">
+                        <p id="name_alert"></p>
                     </p>
                     <p>
                         <label>אני זמר/ת</label>
@@ -78,18 +80,20 @@
                     </p>
                     <p>
                         <label>שם השיר</label>
-                        <input type="text" name="song">
+                        <input type="text" name="song" maxlength="40">
+                        <p id="song_alert"></p>
                     </p>
                     <p>
                         <label>אמן</label>
-                        <input type="text" name="artist">
+                        <input type="text" name="artist" maxlength="20">
+                        <p id="artist_alert"></p>
                     </p>
                     <p class="full">
                         <label>משהו בנוסף?</label>
                         <textarea name="message" rows="5"></textarea>
                     </p>
                     <p class="full">
-                        <button id="submitbutton" type="submit">שלח/י</button>
+                        <button id="submitbutton" type="submit" value="Submit">שלח/י</button>
                     </p>
                 </form>
             </div>
