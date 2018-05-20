@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eli's Pub | Open Stage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <script src="public/assets/js/submit.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="brand">
+            <img src="public/assets/img/elis_pub_logo.png" alt="elis_pub_logo">
+            <span>Eli's pub</span> במה פתוחה</h1>
+
+        <div class="wrapper animated bounceInRight">
+            <div class="company-info">
+                <h3>צרו איתנו קשר!</h3>
+                <ul>
+                    <li>
+                        <i class="fa fa-road"></i>רחוב יפו 32, חיפה</li>
+                    <li>
+                        <i class="fa fa-phone"></i>054-635-4696</li>
+                    <li>
+                        <i class="fa fa-envelope"></i> test@acme.test</li>
+                </ul>
+                <p>
+                    <label>*במידה והנכם מנגנים, יש להביא כלי נגינה</label>
+                </p>
+            </div>
+            <div class="contact">
+                <h3>רוצים לעלות להופיע? כתבו פה את השירים שאתם רוצים לעלות איתם ואנחנו כבר נדאג לכל השאר</h3>
+                {{msg}}
+                <form name="theform" method="POST" action="/">
+                    <p>
+                        <label>שם מלא</label>
+                        <input type="text" name="name">
+                    </p>
+                    <p>
+                        <label>אני זמר/ת</label>
+                        <p class="onoff">
+                            <input type="checkbox" name="answer" value="1" id="checkboxID">
+                            <label for="checkboxID"></label>
+                        </p>
+                    </p>
+                    <p>
+                        <label>אני מנגן על:</label>
+                        <select name="instrument">
+                            <option value="גיטרה">-</option>
+                            <option value="גיטרה">גיטרה</option>
+                            <option value="תופים">תופים</option>
+                            <option value="גיטרת בס">גיטרת בס</option>
+                            <option value="גיטרת בס">קלידים</option>
+                            <option value="סקסופון/חצוצרה">סקסופון/חצוצרה</option>
+                            <option value="סקסופון/חצוצרה">מפוחית</option>
+                            <option value="סקסופון/חצוצרה">חליל</option>
+                            <option value="סקסופון/חצוצרה">אחר</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>שם השיר</label>
+                        <input type="text" name="song">
+                    </p>
+                    <p>
+                        <label>אמן</label>
+                        <input type="text" name="artist">
+                    </p>
+                    <p class="full">
+                        <label>משהו בנוסף?</label>
+                        <textarea name="message" rows="5"></textarea>
+                    </p>
+                    <p class="full">
+                        <button id="submitbutton" type="submit">שלח/י</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
