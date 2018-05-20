@@ -52,9 +52,9 @@ app.post('/', (req, res) => {
         text: output
     };
 
-    // mailgun.messages().send(data, function (error, body) {
-    //     console.log(body);
-    // });
+    mailgun.messages().send(data, function (error, body) {
+        console.log(body);
+    });
 
     res.render('contact', { msg: '*ההודעה נשלחה בהצלחה! ניתן לבקש עד 2 שירים' });
 
