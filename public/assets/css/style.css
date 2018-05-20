@@ -133,10 +133,17 @@ input[type="checkbox"] {width: 5% !important;}
   left: 23px;
 }
 
-.fa-envelope:before {
-  content: "\f0e0";
+.fa-facebook-square:before {
+  content: "\f082";
   position: relative;
-  left: 15px;
+  left: 18px;
+  top: 3px;
+  font-size: 21px;
+}
+
+a {
+  text-decoration: none;
+  color: #485d73;
 }
 
 /* LARGE SCREENS */
