@@ -1,14 +1,15 @@
-var mailgun = require("mailgun-js");
-var api_key = 'key-bd02456a121270a7c35024fa73dd40ae'; //API Key
-var DOMAIN = 'sandboxb0f03b03636e46baaad7275324642e81.mailgun.org'; //Domain name
-var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN });
-
 const express = require('express');
 const bodyPraser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const app = express();
+const port = process.env.PORT || 3000;
+//Mailgun
+var mailgun = require("mailgun-js");
+var api_key = 'key-bd02456a121270a7c35024fa73dd40ae'; //API Key
+var DOMAIN = 'sandboxb0f03b03636e46baaad7275324642e81.mailgun.org'; //Domain name
+var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN });
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -60,8 +61,8 @@ app.post('/', (req, res) => {
 
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000')
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
 });
 
 
