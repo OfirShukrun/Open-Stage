@@ -30,22 +30,23 @@ app.post('/', (req, res) => {
     } else {
         answer = 'כן';
     }
-    const output = `
-יש לך פנייה חדשה!
-פרטי הפונה:
+    const output = ` 
+    
+                 !יש לך פנייה חדשה   
 
-שם: ${req.body.name}
-אני זמר: ${answer}
-כלי נגינה: ${req.body.instrument}
-שם השיר: ${req.body.song}
-אומן: ${req.body.artist}
-הודעה: ${req.body.message}
+              ${req.body.name} :שם
+                     ${answer} ?זמר
+    ${req.body.instrument} :כלי נגינה   
+          ${req.body.song} :שם השיר
+         ${req.body.artist} :אומן
+        ${req.body.message} :הודעה
+        
 `;
 
     var data = {
         from: 'Open Stage <OpenStage@Night.com>',
         to: 'tzuk9800@gmail.com',
-        subject: 'Test',
+        subject: 'New Request',
         text: output
     };
 
