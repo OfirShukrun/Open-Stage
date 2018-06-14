@@ -32,14 +32,14 @@ app.post('/', (req, res) => {
     }
     const output = ` 
     
-                 !יש לך פנייה חדשה   
+     יש לך פנייה חדשה   
 
-              ${req.body.name} :שם
-                     ${answer} ?זמר
-    ${req.body.instrument} :כלי נגינה   
-          ${req.body.song} :שם השיר
-         ${req.body.artist} :אומן
-        ${req.body.message} :הודעה
+שם: ${req.body.name}
+זמר:  ${answer}
+כלי נגינה:${req.body.instrument}       
+ שם השיר:${req.body.song}
+ אומן:${req.body.artist}
+הודעה:${req.body.message} 
         
 `;
 
