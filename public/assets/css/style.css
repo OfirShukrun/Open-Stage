@@ -35,6 +35,25 @@ img {
   top: 19px;
 }
 
+img.icon {
+  position: relative;
+  top: 9px;
+  width: 12%;
+}
+
+@media only screen and (min-width: 700px) {
+
+  .icon-text{
+    transition: transform .2s; 
+  }
+  
+  .icon-text:hover {
+    transform: scale(1.2); 
+  }
+  
+}
+
+
 ul{
   list-style: none;
   padding:0;
