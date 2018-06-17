@@ -1,5 +1,5 @@
 var elisPubMobilePageURL = 'fb://profile/937307902955368';
-var PhizzogMobilePageURL = 'fb://profile/104448929614076';
+var PhizzogMobilePageURL = 'intent://#Intent;package=com.facebook.katana;scheme=fb://page/104448929614076?referrer=app_link;end';
 
 
 function onMobile() {
