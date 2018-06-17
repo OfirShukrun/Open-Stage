@@ -28,24 +28,7 @@ function validateForm() {
     }
 }
 
-enquire.register("(max-width: 600px)", {
-    urls: {
-        mobile: "https://mobile.google.com"
-    },
 
-    setup: function () {
-        this.link = document.querySelector("a");
-        this.urls.original = this.link.href;
-    },
-
-    match: function () {
-        this.link.href = this.urls.mobile;
-    },
-
-    unmatch: function () {
-        this.link.href = this.urls.original;
-    }
-});
 
 
 
