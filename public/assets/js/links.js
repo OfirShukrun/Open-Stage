@@ -1,5 +1,5 @@
-var elisPubMobilePageURL = 'http://m.facebook.com/pages/elis.pub/937307902955368';
-var PhizzogMobilePageURL = 'http://m.facebook.com/pages/phizzogband/104448929614076';
+var elisPubMobilePageURL = 'fb://profile/937307902955368';
+var PhizzogMobilePageURL = 'fb://profile/104448929614076';
 
 
 function onMobile() {
