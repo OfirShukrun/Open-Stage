@@ -6,7 +6,7 @@ function onMobile() {
     console.log('!')
     if (typeof window.orientation !== 'undefined') {
         document.getElementById("phizzog-link").href = PhizzogMobilePageURL;
-        document.getElementById("elisPub-link").href = PhizzogMobilePageURL;
+        document.getElementById("elisPub-link").href = elisPubMobilePageURL;
     }
 };
 
