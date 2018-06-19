@@ -66,19 +66,19 @@
                 </h3>
                 {{msg}}
                 <form name="myForm" onsubmit="return validateForm()" method="POST" action="/">
-                    <p>
+                    <div class="input">
                         <label>שם מלא</label>
                         <input type="text" name="name" maxlength="20">
-                        <p id="name_alert"></p>
-                    </p>
-                    <p>
+                        <p id="name_alert" />
+                    </div>
+                    <div>
                         <label>אני זמר/ת</label>
                         <p class="onoff">
                             <input type="checkbox" name="answer" value="1" id="checkboxID">
                             <label for="checkboxID"></label>
                         </p>
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <label>אני מנגן על:</label>
                         <select id="instrument" name="instrument">
                             <option value=""></option>
@@ -91,24 +91,29 @@
                             <option value="חליל">חליל</option>
                             <option value="אחר">אחר</option>
                         </select>
-                    </p>
-                    <p>
+                    </div>
+                    <div class="input">
                         <label>שם השיר</label>
                         <input type="text" name="song" maxlength="40">
-                        <p id="song_alert"></p>
-                    </p>
-                    <p>
+                        <p id="song_alert" />
+                    </div>
+                    <div class="input">
                         <label>אמן</label>
                         <input type="text" name="artist" maxlength="20">
-                        <p id="artist_alert"></p>
-                    </p>
-                    <p class="full">
+                        <p id="artist_alert" />
+                    </div>
+                    <div>
                         <label>משהו בנוסף?</label>
                         <textarea name="message" rows="5"></textarea>
-                    </p>
-                    <p class="full">
+                    </div>
+                    <div class="input">
+                        <label>מייל ליצירת קשר</label>
+                        <input type="text" name="email" dir="ltr" />
+                        <p id="email_alert" />
+                    </div>
+                    <div class="submit">
                         <button id="submitbutton" type="submit" value="Submit">שלח/י</button>
-                    </p>
+                    </div>
                 </form>
             </div>
         </div>

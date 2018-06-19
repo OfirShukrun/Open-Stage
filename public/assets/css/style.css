@@ -60,8 +60,6 @@ ul{
 
 .brand{
   font-size: 24px;
-  /* padding-top: 0px; */
-  /* font-size: 103%; */
   margin-top:  0;
 }
 
@@ -100,6 +98,7 @@ ul{
 .contact form label{
   text-align: center;
   display:block;
+  padding-top: 5px;
 }
 
 .contact form p{
@@ -133,6 +132,10 @@ ul{
   color:#fff;
   outline:0;
   transition: background-color 0.5s ease-out;
+}
+
+.submit {
+  padding-top: 15px;
 }
 
 select {
@@ -173,7 +176,8 @@ a {
 /* Validation */
 #name_alert,
 #song_alert,
-#artist_alert
+#artist_alert,
+#email_alert
 {
   color: red;
   font-size: 12px;

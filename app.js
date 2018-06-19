@@ -5,6 +5,7 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 8080;
+
 //Mailgun
 var mailgun = require("mailgun-js");
 var api_key = 'key-bd02456a121270a7c35024fa73dd40ae'; //API Key
@@ -40,6 +41,7 @@ app.post('/', (req, res) => {
  שם השיר:${req.body.song}
  אומן:${req.body.artist}
 הודעה:${req.body.message} 
+מייל: ${req.body.mail}
         
 `;
 

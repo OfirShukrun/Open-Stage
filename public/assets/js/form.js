@@ -6,6 +6,7 @@ function validateForm() {
     var name = document.forms["myForm"]["name"].value;
     var song = document.forms["myForm"]["song"].value;
     var artist = document.forms["myForm"]["artist"].value;
+    var email = document.forms["myForm"]["email"].value;
     if (name == "") {
         document.getElementById("name_alert").innerHTML = 'יש לרשום שם מלא!';
     } else {
@@ -21,7 +22,16 @@ function validateForm() {
     } else {
         document.getElementById("artist_alert").innerHTML = '';
     }
-    if (name && song && artist !== "") {
+    validateEmail = (email) => {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    if (email == "" || validateEmail(email) === false) {
+        document.getElementById("email_alert").innerHTML = 'יש למלא מייל תקין ליצירת קשר!';
+    } else {
+        document.getElementById("email_alert").innerHTML = '';
+    }
+    if (name && song && artist && email !== "") {
         return true;
     } else {
         return false;
