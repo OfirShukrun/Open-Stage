@@ -271,6 +271,7 @@ a {
 .onoff input:checked + label:after {
   content: 'כן';
   position: relative;
+  top: -5px;
   color: #091707;
   left: 0px;
 }
